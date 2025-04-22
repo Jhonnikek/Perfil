@@ -126,7 +126,7 @@ h1, h3, p {
 }
 
 .home-content p,
-.aboutme-content ul,
+.aboutme-content ul li,
 .cite-content p,
 .slogan-content p {
     font-size: 1.6rem;
