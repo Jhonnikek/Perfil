@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    padding:0 3rem;
+}
+.logo a {
+    font-weight: 300;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;       
+    gap: 1rem;           
+    align-items: center; 
+}
+
+.nav-bar li a {
+    display: block;
+    padding: 10px 12px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    transform: scale(1.05);
+    border-bottom: 2px solid aqua;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#home,
+#aboutme,
+#cite,
+#slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.home-img img {
+    position: relative;
+    border-radius: 60%;
+    box-shadow: 0 0 25px aqua;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin: 10px;
+    margin-bottom: 30%;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+.home-content h1,
+.aboutme-content h3,
+.cite-content h3,
+.slogan-content h3 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.home-content p,
+.aboutme-content p,
+.cite-content p,
+.slogan-content p {
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+.aboutme-content ul li{
+    list-style: none;
+}
+
+.aboutme-content h4{
+    color: aqua;
+}
+span {
+    color: aqua;
+}
+
+@media (max-width: 768px) {
+    .menu .container {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: black;
+        margin-top: 10px;
+    }
+
+    .nav-bar.open {
+        display: flex;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-bar li a {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .home-img img {
+        margin-bottom: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 768px) {
+    .nav-bar {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        display: none; 
+        z-index: 15;
+    }
+    
+    .nav-bar.open {
+        display: block; 
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-bar li {
+        width: 100%;
+    }
+    
+    .nav-bar li a {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu-toggle {
+        display: flex;
+        z-index: 20;
+    }
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle span {
+    transition: all 0.3s ease;
+}
