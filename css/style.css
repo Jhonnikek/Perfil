@@ -118,7 +118,7 @@ h1, h3, p {
 .home-content h1,
 .aboutme-content h3,
 .cite-content h3,
-.slogan-content h3 {
+.slogan-content h3{
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.1;
@@ -126,7 +126,7 @@ h1, h3, p {
 }
 
 .home-content p,
-.aboutme-content p,
+.aboutme-content ul,
 .cite-content p,
 .slogan-content p {
     font-size: 1.6rem;
@@ -136,9 +136,6 @@ h1, h3, p {
     list-style: none;
 }
 
-.aboutme-content h4{
-    color: aqua;
-}
 span {
     color: aqua;
 }
